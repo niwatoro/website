@@ -14,7 +14,7 @@ export const Feed: FC = () => {
           <UnderlineLink href="https://www.instagram.com/niwatoro277/">Instagram</UnderlineLink>
         </div>
       </div>
-      <div className="md:w-2/3 md:flex h-2/3">
+      <div className="md:w-2/3 md:flex h-2/3 md:h-full">
         <div className="md:w-1/2 md:h-full h-1/2 bg-white flex flex-col justify-end md:border-x-8 md:border-x-black border-t-8 border-t-black md:border-t-0">
           <div className="h-10 py-2 flex items-center justify-start gen font-black text-2xl pl-2">Twitter</div>
           <div className="h-full">
