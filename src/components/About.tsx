@@ -5,10 +5,10 @@ import { MyTitle } from "./MyTitle";
 export const About: FC = () => {
   return (
     <div className="w-full h-full flex flex-col-reverse md:flex-row-reverse text-white justify-between border-y-8 border-y-black">
-      <div className="md:w-1/3 w-full bg-red-500 flex flex-col justify-end h-1/2 md:h-full">
+      <div className="md:w-1/3 w-full bg-red-500 flex flex-col justify-end h-1/3 md:h-full">
         <Image className="md:object-cover object-contain h-full w-full" src={"/images/couple.png"} alt="selfie" width={9999} height={9999} />
       </div>
-      <div className="md:pb-28 py-8 md:pt-12 px-14 flex flex-col gap-y-5 justify-between md:w-2/3">
+      <div className="md:pb-28 py-8 md:pt-12 h-2/3 px-14 flex flex-col gap-y-5 justify-between md:w-2/3">
         <MyTitle>About</MyTitle>
         <div className="text-lg font-medium gen flex flex-col gap-y-2">
           <p>
