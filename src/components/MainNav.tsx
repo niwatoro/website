@@ -24,7 +24,7 @@ interface NavLinkProps {
 }
 const NavLink: FC<NavLinkProps> = ({ href, children }) => {
   return (
-    <AnchorLink offset="80" className="text-sm md:text-lg mx-1 md:mx-2 flex justify-center items-center pt-1 md:pt-2" href={href}>
+    <AnchorLink offset="80" className="text-sm md:text-lg mx-1 md:mx-2 h-[56px] md:h-full flex justify-center items-center pt-1 md:pt-2" href={href}>
       {children}
     </AnchorLink>
   );
