@@ -9,6 +9,7 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>NIWATORO</title>
+        <meta name="description" content="こんにちは、俺はにわとろ 起業家です" />
       </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-016Y4N32ME" />
       <Script>
