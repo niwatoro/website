@@ -9,7 +9,13 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>NIWATORO</title>
-        <meta name="description" content="こんにちは、俺はにわとろ 起業家です" />
+        <meta name="description" content="こんにちは、俺はにわとろ 起業家です 25歳までに100億円稼ぎます" />
+        <meta property="og:image" content="https://www.niwatoro.com/_next/image?url=%2Fimages%2Fpenguin.png&w=3840&q=75" />
+        <meta property="og:title" content="Niwatoro" />
+        <meta property="og:description" content="こんにちは、俺はにわとろ 起業家です 25歳までに100億円稼ぎます" />
+        <meta property="og:url" content="https://www.niwatoro.com/" />
+        <meta property="og:site_name" content="Niwatoro" />
+        <meta property="og:type" content="website" />
       </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-016Y4N32ME" />
       <Script>
