@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { MyTitle } from "./MyTitle";
+import { useLocale } from "./locales/use-locale";
 
 export const News: FC = () => {
+  const { t } = useLocale();
+
   return (
     <div className="w-full h-full md:flex justify-between bg-white border-y-8 border-y-black">
       <div className="pb-28 pt-12 px-14 flex flex-col justify-between md:w-1/3 h-1/3 md:border-b-0 border-b-8 border-b-black">
@@ -11,12 +14,12 @@ export const News: FC = () => {
       </div>
       <div className="md:w-2/3 md:h-full h-2/3">
         <div className="w-full flex h-1/2">
-          <NewsCard title="サイトを更新しました！" url="/" imageUrl="/images/newsite.png" initialRow date="2023/03/17" />
-          <NewsCard title="はてブでホットエントリーに載りました！" url="https://b.hatena.ne.jp/entry/s/zenn.dev/niwatoro/articles/51f22ab69e0c9b#utm_campaign=bookmark_share&utm_content=zenn.dev&utm_medium=social&utm_source=twitter&utm_term=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%20ChatGPT" imageUrl="/images/hatena.png" noBorder initialRow date="2023/03/13" />
+          <NewsCard title={t.SITE_UPDATED} url="/" imageUrl="/images/newsite.png" initialRow date="2023/03/17" />
+          <NewsCard title={t.HATENA_HOT_ENTRY} url="https://b.hatena.ne.jp/entry/s/zenn.dev/niwatoro/articles/51f22ab69e0c9b#utm_campaign=bookmark_share&utm_content=zenn.dev&utm_medium=social&utm_source=twitter&utm_term=%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%20ChatGPT" imageUrl="/images/hatena.png" noBorder initialRow date="2023/03/13" />
         </div>
         <div className="w-full flex h-1/2">
-          <NewsCard title="東大機械情報工学科に進学しました！" url="http://www.kikaib.t.u-tokyo.ac.jp/" imageUrl="/images/u-tokyo.jpg" date="2023/03/09" />
-          <NewsCard title="HSK6で236点を獲得しました！" date="2023/01/04" imageUrl="/images/hsk6.jpg" noBorder url="https://www.hskj.jp/level/w_6/" />
+          <NewsCard title={t.TODAI_ENROLLED} url="http://www.kikaib.t.u-tokyo.ac.jp/" imageUrl="/images/u-tokyo.jpg" date="2023/03/09" />
+          <NewsCard title={t.HSK6} date="2023/01/04" imageUrl="/images/hsk6.jpg" noBorder url="https://www.hskj.jp/level/w_6/" />
         </div>
       </div>
     </div>

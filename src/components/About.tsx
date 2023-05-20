@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { FC } from "react";
 import { MyTitle } from "./MyTitle";
+import { useLocale } from "./locales/use-locale";
 
 export const About: FC = () => {
+  const { t } = useLocale();
+
   return (
     <div className="w-full h-full flex flex-col-reverse md:flex-row-reverse text-white justify-between border-y-8 border-y-black">
       <div className="md:w-1/3 w-full bg-red-500 flex flex-col justify-end h-1/3 md:h-full">
@@ -12,12 +15,12 @@ export const About: FC = () => {
         <MyTitle>About</MyTitle>
         <div className="text-lg font-medium gen flex flex-col gap-y-2">
           <p>
-            こんにちは、俺はにわとろ。起業家です。
+            {t.HELLO_IM_NIWATORO}
             <br />
-            未来の開拓者です。
+            {t.IM_PIONEER}
           </p>
-          <p>とりあえず今は結婚したので、早くロマンチックな結婚式を挙げて豪邸を建てないといけません。</p>
-          <p>そのせいで仕方なくエンジニアをしていますが、早く経営者になって大きく稼ぎたいです。</p>
+          <p>{t.IM_MARRIED_SO}</p>
+          <p>{t.ENGINEER_BUT_EXECUTIVE}</p>
         </div>
       </div>
     </div>

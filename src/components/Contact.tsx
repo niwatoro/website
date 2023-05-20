@@ -1,10 +1,13 @@
 import { FC, ReactNode, useState } from "react";
 import { MyTitle } from "./MyTitle";
+import { useLocale } from "./locales/use-locale";
 
 export const Contact: FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
+
+  const { t } = useLocale();
 
   const sendEmail = async () => {
     const body = `名前：\n${name}\n\nメール：\n${email}\n\n内容：\n${content}`;
@@ -25,11 +28,11 @@ export const Contact: FC = () => {
       </div>
       <div className="md:w-1/3 flex flex-col mt-12 px-10 md:px-0 justify-center">
         <form>
-          <MuSubtitle>名前</MuSubtitle>
+          <MuSubtitle>{t.NAME}</MuSubtitle>
           <MyInput type="text" value={name} setValue={setName} />
-          <MuSubtitle>メールアドレス</MuSubtitle>
+          <MuSubtitle>{t.EMAIL}</MuSubtitle>
           <MyInput type="email" value={email} setValue={setEmail} />
-          <MuSubtitle>内容</MuSubtitle>
+          <MuSubtitle>{t.CONTENT}</MuSubtitle>
           <MyTextArea value={content} setValue={setContent} />
           <div className="flex justify-center mt-8">
             <MyButton onClick={sendEmail} />
@@ -67,9 +70,11 @@ interface MyButtonProps {
   onClick: () => void;
 }
 const MyButton: FC<MyButtonProps> = ({ onClick }) => {
+  const { t } = useLocale();
+
   return (
     <button className="w-96 h-16 bg-red-500 text-white font-bold rounded-lg border-b-4 border-red-700 active:translate-y-1 active:border-b-2" onClick={onClick}>
-      送信
+      {t.SEND}
     </button>
   );
 };
