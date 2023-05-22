@@ -2,8 +2,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const apiUrl = "https://wajziv1051.execute-api.ap-northeast-1.amazonaws.com/default/sendEmailToMyGmail";
-  const apiKey = "wSTT514lsn8QdSjUQkvOW6R8ldcyHhQb3JBXaDuK";
+  const apiUrl = process.env.API_URL;
+  const apiKey = process.env.API_KEY;
+  if (!apiUrl || !apiKey) {
+    throw new Error("API_URL or API_KEY is not defined");
+  }
 
   const response = await fetch(apiUrl, {
     method: "POST",
