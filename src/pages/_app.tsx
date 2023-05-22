@@ -16,6 +16,7 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta property="og:url" content="https://www.niwatoro.com/" />
         <meta property="og:site_name" content="Niwatoro" />
         <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="5N6EjrwFm-4Ff3ZdKdVb2Ntsy-8RLdtCjAkJemzgeNE" />
       </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-016Y4N32ME" />
       <Script>
