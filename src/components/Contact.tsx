@@ -18,7 +18,12 @@ export const Contact: FC = () => {
       },
       body: JSON.stringify({ body }),
     });
-    console.log(response);
+    const json = await response.json();
+    if (json.message) {
+      alert("送信しました。");
+    } else {
+      alert("送信に失敗しました。");
+    }
   };
 
   return (
@@ -73,7 +78,14 @@ const MyButton: FC<MyButtonProps> = ({ onClick }) => {
   const { t } = useLocale();
 
   return (
-    <button className="w-96 h-16 bg-red-500 text-white font-bold rounded-lg border-b-4 border-red-700 active:translate-y-1 active:border-b-2" onClick={onClick}>
+    <button
+      type="submit"
+      className="w-96 h-16 bg-red-500 text-white font-bold rounded-lg border-b-4 border-red-700 active:translate-y-1 active:border-b-2"
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
+      }}
+    >
       {t.SEND}
     </button>
   );
